@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ssij ssij ssij</title>
+    <style>
+      :root { --bg: #0f0f12; --fg: #ffffff; }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      .pulse {
+        font-size: clamp(32px, 8vw, 120px);
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        text-transform: lowercase;
+        text-align: center;
+        animation: pulse 1.2s ease-in-out infinite;
+        text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 0.85; }
+        50% { transform: scale(1.1); opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .pulse { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pulse">ssij ssij ssij</div>
+  </body>
+</html>
